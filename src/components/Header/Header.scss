@@ -20,4 +20,10 @@
     border-bottom: 1px solid black;
     background-color: aliceblue;
  } 
+
+&__duo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+} 
 }
