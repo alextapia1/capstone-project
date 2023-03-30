@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-
+import './App.scss';
+import React from 'react';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className='App__name'>Time in Lieu</h1>
+      <div className='footer__text'>
+      <p className=''>Twitter</p>
+      <p className=''>LinkedIn</p>
+      <p className=''>Github</p>
+      <p className=''>© AKM Inc. All Rights Reserved.</p>
+      </div>
     </div>
   );
 }

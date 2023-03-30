@@ -1,0 +1,21 @@
+@use './styles/variables' as *;
+
+
+*{
+    box-sizing: border-box;   
+}
+
+.App__name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-top: 1px solid aliceblue;
+    border-bottom: 1px solid aliceblue;
+    background-color: aliceblue;
+}
+
+.footer__text{
+    display: flex;
+    justify-content: space-around;
+}
