@@ -1,0 +1,19 @@
+@use '../../styles/variables' as *;
+
+*{
+    box-sizing: border-box;   
+}
+.date{
+    padding: 1rem;
+
+&__data{
+    display: flex;
+    flex-direction: column;
+ }   
+ 
+&__container{
+    display: flex;
+    gap: 1rem;
+} 
+}
+
