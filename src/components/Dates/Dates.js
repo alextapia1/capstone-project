@@ -15,43 +15,103 @@ const Dates = () => {
 
     return (
         <div className='date'>
-            <div className='date__container'>
+            <form className='date__form'>
               
-                <div className='date__block'>
-                    <h1 className='date__title'>Sunday</h1>
-                    <p className='date__date'>April 14, 2023</p>
-                        <div className='date__data'>
-                            <span className='date__text'>going for a walk</span>
-                            <span className='date__text'>washing clothes</span>
-                            <span className='date__text'>picking up Dinner</span>
+                 <div className='date__form--title'>
+                            <h1 className='date__form--day'>Monday</h1>
+                            <label className='date__form--date'>April 10, 2023</label>
+                            <div className='date__form--info'>
+                            <input className='date__form--details' type="text" name ="details" />
+                            <input className='date__form--details' type="text" name ="details" />
+                            <input className='date__form--details' type="text" name ="details" />
+                            </div>
+                            <div className='btn'>
+                            <button className='btn__add' type='submit'>Comment </button>
+                            </div>
                         </div>
-                </div>
 
-                <div className='date__block'>
-                        <h1 className='date__title'>Monday</h1>
-                        <p className='date__date'>April 15, 2023</p>
-                        <div className='date__data'>
-                            <span className='date__text'>going for a walk</span>
-                            <span className='date__text'>washing clothes</span>
-                            <span className='date__text'>picking up Dinner</span>
-                        </div>    
-                 </div>
+                <div className='date__form--title'>
+                            <h1 className='date__form--day'>Tuesday</h1>
+                            <label className='date__form--date'>April 11 2023</label>
+                            <div className='date__form--info'>
+                            <input className='date__form--details' type="text" name ="details" />
+                            <input className='date__form--details' type="text" name ="details" />
+                            <input className='date__form--details' type="text" name ="details" />
+                            </div>
+                            <div className='btn'>
+                            <button className='btn__add' type='submit'>Comment </button>
+                            </div>
+                        </div>
 
                 
-                        <div className='date__block'>
-                            <h1 className='date__title'>Tuesday</h1>
-                            <p className='date__date'>April 16, 2023</p>
-                            <div className='date__data'>
-                                <span className='date__text'>going for a walk</span>
-                                <span className='date__text'>washing clothes</span>
-                                <span className='date__text'>picking up Dinner</span>
+                 <div className='date__form--title'>
+                            <h1 className='date__form--day'>Wednesday</h1>
+                            <label className='date__form--date'>April 12, 2023</label>
+                            <div className='date__form--info'>
+                            <input className='date__form--details' type="text" name ="details" />
+                            <input className='date__form--details' type="text" name ="details" />
+                            <input className='date__form--details' type="text" name ="details" />
                             </div>
-                      </div>
+                            <div className='btn'>
+                            <button className='btn__add' type='submit'>Comment </button>
+                            </div>
+                        </div>
 
-                   <form>
+                   
+                        <div className='date__form--title'>
+                            <h1 className='date__form--day'>Thursday</h1>
+                            <label className='date__form--date'>April 13, 2023</label>
+                            <div className='date__form--info'>
+                            <input className='date__form--details' type="text" name ="details" />
+                            <input className='date__form--details' type="text" name ="details" />
+                            <input className='date__form--details' type="text" name ="details" />
+                            </div>
+                            <div className='btn'>
+                            <button className='btn__add' type='submit'>Comment </button>
+                            </div>
+                        </div>
+
+                        <div className='date__form--title'>
+                            <h1 className='date__form--day'>Friday</h1>
+                            <label className='date__form--date'>April 14, 2023</label>
+                            <div className='date__form--info'>
+                            <input className='date__form--details' type="text" name ="details" />
+                            <input className='date__form--details' type="text" name ="details" />
+                            <input className='date__form--details' type="text" name ="details" />
+                            </div>
+                            <div className='btn'>
+                            <button className='btn__add' type='submit'>Comment </button>
+                            </div>
+                        </div>
+
+                        <div className='date__form--title'>
+                            <h1 className='date__form--day'>Saturday</h1>
+                            <label className='date__form--date'>April 15, 2023</label>
+                            <div className='date__form--info'>
+                            <input className='date__form--details' type="text" name ="details" />
+                            <input className='date__form--details' type="text" name ="details" />
+                            <input className='date__form--details' type="text" name ="details" />
+                            </div>
+                            <div className='btn'>
+                            <button className='btn__add' type='submit'>Comment </button>
+                            </div>
+                        </div>
+
+                        <div className='date__form--title'>
+                            <h1 className='date__form--day'>Sunday</h1>
+                            <label className='date__form--date'>April 16, 2023</label>
+                            <div className='date__form--info'>
+                            <input className='date__form--details' type="text" name ="details" />
+                            <input className='date__form--details' type="text" name ="details" />
+                            <input className='date__form--details' type="text" name ="details" />
+                            </div>
+                            <div className='btn'>
+                            <button className='btn__add' type='submit'>Comment </button>
+                            </div>
+                        </div>
                     
                     </form>   
-            </div>
+            
         </div>
     );
 };
