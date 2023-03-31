@@ -1,11 +1,21 @@
+@use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
 
 *{
     box-sizing: border-box;   
 }
-.date{
+
+.note{
     padding: 1rem 0.5rem;
     color: navy;
+
+&__memo{
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid aliceblue;
+    border-bottom: 1px solid aliceblue;
+    background-color: aliceblue;
+}    
 
 &__data{
     display: flex;
@@ -27,24 +37,20 @@
         flex-direction: row;
         flex-wrap: wrap;
     }
-}
+ }
+
+&__form--title{
+    padding-top: 0.8rem;
+} 
 
 &__form--day{
     display: flex;
-
-    @include tablet {
-        justify-content: center;
-    }
-    
+    justify-content: center;
  }
 
 &__form--date{
     display: flex;
-
-    @include tablet {
-        justify-content: center;
-    }
-   
+    justify-content: center;
 }
 
 &__form--info{
@@ -63,11 +69,14 @@
 
 .btn{
     display: flex;
+    justify-content: center;
     padding-top: 0.5rem;
     color: aliceblue;
-    justify-content: end;
+  
 
-
+    @include tablet{
+        justify-content: end;
+    }
 
 &__add{
     background-color: aliceblue;
