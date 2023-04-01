@@ -18,8 +18,7 @@ const Dates = () => {
             <form className='date__form'>
               
                  <div className='date__form--title'>
-                            <h1 className='date__form--day'>Monday</h1>
-                            <label className='date__form--date'>April 10, 2023</label>
+                            <label className='date__form--day'>Monday</label>
                             <div className='date__form--info'>
                             <input className='date__form--details' type="text" name ="details" />
                             <input className='date__form--details' type="text" name ="details" />
@@ -31,8 +30,7 @@ const Dates = () => {
                         </div>
 
                 <div className='date__form--title'>
-                            <h1 className='date__form--day'>Tuesday</h1>
-                            <label className='date__form--date'>April 11 2023</label>
+                            <label className='date__form--day'>Tuesday</label>
                             <div className='date__form--info'>
                             <input className='date__form--details' type="text" name ="details" />
                             <input className='date__form--details' type="text" name ="details" />
@@ -45,8 +43,7 @@ const Dates = () => {
 
                 
                  <div className='date__form--title'>
-                            <h1 className='date__form--day'>Wednesday</h1>
-                            <label className='date__form--date'>April 12, 2023</label>
+                            <label className='date__form--day'>Wednesday</label>
                             <div className='date__form--info'>
                             <input className='date__form--details' type="text" name ="details" />
                             <input className='date__form--details' type="text" name ="details" />
@@ -59,8 +56,7 @@ const Dates = () => {
 
                    
                         <div className='date__form--title'>
-                            <h1 className='date__form--day'>Thursday</h1>
-                            <label className='date__form--date'>April 13, 2023</label>
+                            <label className='date__form--day'>Thursday</label>
                             <div className='date__form--info'>
                             <input className='date__form--details' type="text" name ="details" />
                             <input className='date__form--details' type="text" name ="details" />
@@ -72,8 +68,7 @@ const Dates = () => {
                         </div>
 
                         <div className='date__form--title'>
-                            <h1 className='date__form--day'>Friday</h1>
-                            <label className='date__form--date'>April 14, 2023</label>
+                            <label className='date__form--day'>Friday</label>
                             <div className='date__form--info'>
                             <input className='date__form--details' type="text" name ="details" />
                             <input className='date__form--details' type="text" name ="details" />
@@ -85,8 +80,7 @@ const Dates = () => {
                         </div>
 
                         <div className='date__form--title'>
-                            <h1 className='date__form--day'>Saturday</h1>
-                            <label className='date__form--date'>April 15, 2023</label>
+                            <label className='date__form--day'>Saturday</label>
                             <div className='date__form--info'>
                             <input className='date__form--details' type="text" name ="details" />
                             <input className='date__form--details' type="text" name ="details" />
@@ -98,8 +92,7 @@ const Dates = () => {
                         </div>
 
                         <div className='date__form--title'>
-                            <h1 className='date__form--day'>Sunday</h1>
-                            <label className='date__form--date'>April 16, 2023</label>
+                            <label className='date__form--day'>Sunday</label>
                             <div className='date__form--info'>
                             <input className='date__form--details' type="text" name ="details" />
                             <input className='date__form--details' type="text" name ="details" />
