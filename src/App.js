@@ -8,16 +8,16 @@ import Notes from './components/Notes/Notes';
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-      
+    <BrowserRouter className="browserRouter">
       <Header/>
-      <h1 className='App__name'>Time in Lieu</h1>
-      <Dates />
-      <Notes />
+    <div className="App">
+      <Routes>
+      <Route path="/" element={<Dates/>} />
+     {/*<Notes />*/}
+      </Routes>
+    </div>
       <Footer />
       </BrowserRouter>
-    </div>
   );
 }
 

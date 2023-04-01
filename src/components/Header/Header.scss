@@ -23,4 +23,17 @@
     flex-direction: row;
     justify-content: space-between;
  } 
+
+&__title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-top: 1px solid aliceblue;
+    border-bottom: 1px solid aliceblue;
+    background-color: aliceblue;
+    color: navy;
+    margin-top: 0;
+    margin-bottom: 0;
+} 
 }
