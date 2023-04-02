@@ -45,6 +45,18 @@ const Notes = () => {
                             </div>
                         </div>
 
+                        <div className='note__form--title'>
+                            <label className='note__form--date'>Pending</label>
+                            <div className='note__form--info'>
+                            <input className='note__form--details' type="text" name ="details" />
+                            <input className='note__form--details' type="text" name ="details" />
+                            <input className='note__form--details' type="text" name ="details" />
+                            </div>
+                            <div className='btn'>
+                            <button className='btn__add' type='submit'>Comment </button>
+                            </div>
+                        </div>
+
             </form>
         </div>
     );

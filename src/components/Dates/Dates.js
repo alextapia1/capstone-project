@@ -1,21 +1,42 @@
 import React from 'react';
 import '../Dates/Dates.scss';
-
-// const cards = [{
-//     id: 1, title: "Sunday", content:"text, text, text,",
-//     id: 2, title: "Monday", content:"text, text, text,",
-//     id: 3, title: "Tuesday", content:"text, text, text,",
-//     id: 4, title: "Wednesday", content:"text, text, text,",
-//     id: 5, title: "Thursday", content:"text, text, text,",
-//     id: 6, title: "Friday", content:"text, text, text,",
-//     id: 7, title: "Saturday", content:"text, text, text,",
-// }]
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const Dates = () => {
 
+    const [selectedFile, setSelectedFile] = useState('');
+
+
+        function handleSubmit(event) {
+           event.preventDefault();
+
+           const form = event.target;
+
+           const inputvalues = [
+            form.item_id.values,
+            form.category.values,
+            form.data.values,
+            form.complete.values,
+            form.groceryList.values,
+            form.notes.values,
+            form.events.values,
+            form.pending.values,
+            form.weekly.values]
+        
+
+         }
+    
+       
+
+       
+            
+
+
+
     return (
         <div className='date'>
-            <form className='date__form'>
+            <form onSubmit={handleSubmit} className='date__form'>
               
                  <div className='date__form--title'>
                             <label className='date__form--day'>Monday</label>
