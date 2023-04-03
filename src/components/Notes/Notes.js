@@ -1,5 +1,7 @@
 import React from 'react';
 import '../Notes/Notes.scss';
+import editIcon from "../../assets/edit-24px.svg";
+import deleteIcon from "../../assets/delete_outline-24px.svg";
 
 const Notes = () => {
 
@@ -17,7 +19,9 @@ const Notes = () => {
                             <input className='note__form--details' type="text" name ="details" />
                             </div>
                             <div className='btn'>
-                            <button className='btn__add' type='submit'>Comment </button>
+                            <button className='btn__add' type='text'> Add </button>
+                            <img src={editIcon} alt='editIcon' type='text'/>
+                            <img src={deleteIcon} alt='deleteIcon'/>
                             </div>
                         </div>
 
@@ -29,7 +33,9 @@ const Notes = () => {
                             <input className='note__form--details' type="text" name ="details" />
                             </div>
                             <div className='btn'>
-                            <button className='btn__add' type='submit'>Comment </button>
+                            <button className='btn__add' type='text'> Add </button>
+                            <img src={editIcon} alt='editIcon' type='text'/>
+                            <img src={deleteIcon} alt='deleteIcon'/>
                             </div>
                         </div>
 
@@ -41,7 +47,9 @@ const Notes = () => {
                             <input className='note__form--details' type="text" name ="details" />
                             </div>
                             <div className='btn'>
-                            <button className='btn__add' type='submit'>Comment </button>
+                            <button className='btn__add' type='text'> Add </button>
+                            <img src={editIcon} alt='editIcon' type='text'/>
+                            <img src={deleteIcon} alt='deleteIcon'/>
                             </div>
                         </div>
 
@@ -53,7 +61,9 @@ const Notes = () => {
                             <input className='note__form--details' type="text" name ="details" />
                             </div>
                             <div className='btn'>
-                            <button className='btn__add' type='submit'>Comment </button>
+                            <button className='btn__add' type='text'> Add </button>
+                            <img src={editIcon} alt='editIcon' type='text'/>
+                            <img src={deleteIcon} alt='deleteIcon'/>
                             </div>
                         </div>
 

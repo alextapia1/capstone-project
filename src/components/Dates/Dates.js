@@ -4,28 +4,41 @@ import { useEffect, useState } from 'react';
 import editIcon from "../../assets/edit-24px.svg";
 import deleteIcon from "../../assets/delete_outline-24px.svg";
 import axios from 'axios';
+import { getDates } from '../../utils/apiRequest';
 
 const Dates = () => {
-
-    const [selectedFile, setSelectedFile] = useState('');
+    const [item_id, setItem_id] = useState('');
+    const [category, setCategory] = useState('');
+    const [data, setData] = useState('');
+    const [complete, setComplete] = ('');
+   
    
 
         function handleSubmit(event) {
            event.preventDefault();
 
            const form = event.target;
+            console.log(form)
+        //    const inputvalues = [ 
+        //     form.category.value,
+        //     form.data.value
+        //     ]
+            // console.log(inputvalues)
+            console.log(form.category)
+            console.log(form.data)
 
-           const inputvalues = [
-            form.item_id.values,
-            form.category.values,
-            form.data.values,
-            form.complete.values,
-            ]
-                //axios post
          }
     
        
-
+         useEffect(() =>{
+            console.log()
+            getDates()
+            .then(res => {
+            console.log(res)
+            
+            })
+        },[])
+            //render data
        
             
 
@@ -36,11 +49,11 @@ const Dates = () => {
             <form onSubmit={handleSubmit} className='date__form'>
               
                  <div className='date__form--title'>
-                            <label className='date__form--day'>Monday</label>
+                            <label className='date__form--day'>{category.category}</label>
                             <div className='date__form--info'>
-                            <input className='date__form--details' type="text" name ="details" />
-                            <input className='date__form--details' type="text" name ="details" />
-                            <input className='date__form--details' type="text" name ="details" />
+                            <input className='date__form--details' type="text" name ={data.data} />
+                            <input className='date__form--details' type="text" name ={data.data} />
+                            <input className='date__form--details' type="text" name ={data.data} />
                             </div>
                             <div className='btn'>
                             <button className='btn__add' type='text'> Add </button>

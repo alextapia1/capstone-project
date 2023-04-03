@@ -3,7 +3,7 @@ import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Dates from './components/Dates/Dates';
+import HomePage from './pages/HomePage';
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Header/>
     <div className="App">
       <Routes>
-      <Route path="/" element={<Dates/>} />
+      <Route path="/" element={<HomePage/>} />
       
       </Routes>
     </div>
