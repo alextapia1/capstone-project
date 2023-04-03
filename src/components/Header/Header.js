@@ -12,7 +12,7 @@ const Header = () => {
                         <li className='nav__name'>Username</li> 
                     </ul>
                 </div>
-                <h1 className='nav__title'>Time in Lieu</h1>
+                <h1 className='nav__title'>Busy Parent Buddy</h1>
             </section>
         </nav>
     );
