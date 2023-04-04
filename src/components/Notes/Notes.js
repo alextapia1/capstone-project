@@ -17,9 +17,11 @@ const Notes = () => {
                             <input className='note__form--details' type="text" name ="details" />
                             <input className='note__form--details' type="text" name ="details" />
                             <input className='note__form--details' type="text" name ="details" />
+                            <input className='note__form--details' type="text" name ="details" />
+                            <input className='note__form--details' type="text" name ="details" />
                             </div>
                             <div className='btn'>
-                            <button className='btn__add' type='text'> Add </button>
+                            <button className='btn__submit' type='text'> Submit </button>
                             <img src={editIcon} alt='editIcon' type='text'/>
                             <img src={deleteIcon} alt='deleteIcon'/>
                             </div>
@@ -31,9 +33,11 @@ const Notes = () => {
                             <input className='note__form--details' type="text" name ="details" />
                             <input className='note__form--details' type="text" name ="details" />
                             <input className='note__form--details' type="text" name ="details" />
+                            <input className='note__form--details' type="text" name ="details" />
+                            <input className='note__form--details' type="text" name ="details" />
                             </div>
                             <div className='btn'>
-                            <button className='btn__add' type='text'> Add </button>
+                            <button className='btn__submit' type='text'> Submit </button>
                             <img src={editIcon} alt='editIcon' type='text'/>
                             <img src={deleteIcon} alt='deleteIcon'/>
                             </div>
@@ -45,9 +49,12 @@ const Notes = () => {
                             <input className='note__form--details' type="text" name ="details" />
                             <input className='note__form--details' type="text" name ="details" />
                             <input className='note__form--details' type="text" name ="details" />
+                            <input className='note__form--details' type="text" name ="details" />
+                            <input className='note__form--details' type="text" name ="details" />
+
                             </div>
                             <div className='btn'>
-                            <button className='btn__add' type='text'> Add </button>
+                            <button className='btn__submit' type='text'> Submit </button>
                             <img src={editIcon} alt='editIcon' type='text'/>
                             <img src={deleteIcon} alt='deleteIcon'/>
                             </div>
@@ -59,9 +66,11 @@ const Notes = () => {
                             <input className='note__form--details' type="text" name ="details" />
                             <input className='note__form--details' type="text" name ="details" />
                             <input className='note__form--details' type="text" name ="details" />
+                            <input className='note__form--details' type="text" name ="details" />
+                            <input className='note__form--details' type="text" name ="details" />
                             </div>
                             <div className='btn'>
-                            <button className='btn__add' type='text'> Add </button>
+                            <button className='btn__submit' type='text'> Submit </button>
                             <img src={editIcon} alt='editIcon' type='text'/>
                             <img src={deleteIcon} alt='deleteIcon'/>
                             </div>

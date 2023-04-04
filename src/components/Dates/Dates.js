@@ -3,16 +3,15 @@ import '../Dates/Dates.scss';
 import { useEffect, useState } from 'react';
 import editIcon from "../../assets/edit-24px.svg";
 import deleteIcon from "../../assets/delete_outline-24px.svg";
-import axios from 'axios';
-import { getDates } from '../../utils/apiRequest';
+import { getDates, postDate } from '../../utils/apiRequest';
 
-const Dates = () => {
+const Dates = (props) => {
     const [item_id, setItem_id] = useState('');
     const [category, setCategory] = useState('');
-    const [data, setData] = useState('');
+    const [data, setData] = useState([]);
     const [complete, setComplete] = ('');
    
-   
+    const {dateList} = props
 
         function handleSubmit(e) {
            e.preventDefault();
@@ -29,24 +28,21 @@ const Dates = () => {
 
          }
     
-       
+         //get data
          useEffect(() =>{
-            console.log()
             getDates()
             .then(res => {
             console.log(res)
-            
+            setData(res)
             }).catch(error => console.log(error))
         },[]);
-            //render data
-
-         useEffect(() =>{
-            fetch('http://localhost:3000/dates')
-            .then(res => res.json())
-            .then(data => setData(data));
-         },);   
-       
             
+        console.log(data)
+        //post data
+            postDate()
+            .then((res) =>{
+            })
+        
 
 
 
@@ -57,13 +53,15 @@ const Dates = () => {
                  <div className='date__form--title'>
                             <label className='date__form--day'>Monday</label>
                             <div className='date__form--info'>
-                            <input className='date__form--details' type="text" name ="data" 
-                            onChange={(e) => setData(e.target.value)}/>
-                            <input className='date__form--details' type="text" name ={data.data} />
-                            <input className='date__form--details' type="text" name ={data.data} />
+                            <input className='date__form--details' type="text" placeholder = {!(data.length===0) ? data[0].data : '' }
+                            onChange={(e) => data(e.target.value)}/>
+                            <input className='date__form--details' type="text" placeholder ={data.data} />
+                            <input className='date__form--details' type="text" name ="details" />
+                            <input className='date__form--details' type="text" name ="details" />
+                            <input className='date__form--details' type="text" name ="details" />
                             </div>
                             <div className='btn'>
-                            <button className='btn__add' type='text'> Add </button>
+                            <button className='btn__submit' type='text' onChange={(e) => data(e.target.value)}> Submit </button>
                             <img src={editIcon} alt='editIcon' type='text'/>
                             <img src={deleteIcon} alt='deleteIcon'/>
                             </div>
@@ -72,13 +70,14 @@ const Dates = () => {
                 <div className='date__form--title'>
                             <label className='date__form--day'>Tuesday</label>
                             <div className='date__form--info'>
-                            <input className='date__form--details' type="text" name ="data" 
+                            <input className='date__form--details' type="text"
                             onChange={(e) => setData(e.target.value)}/>
                             <input className='date__form--details' type="text" name ="details" />
                             <input className='date__form--details' type="text" name ="details" />
-                            </div>
+                            <input className='date__form--details' type="text" name ="details" />
+                            <input className='date__form--details' type="text" name ="details" />                            </div>
                             <div className='btn'>
-                            <button className='btn__add' type='text'> Add </button>
+                            <button className='btn__submit' type='text'> Submit </button>
                             <img src={editIcon} alt='editIcon'/>
                             <img src={deleteIcon} alt='deleteIcon'/>
                             </div>
@@ -92,9 +91,11 @@ const Dates = () => {
                             onChange={(e) => setData(e.target.value)}/>
                             <input className='date__form--details' type="text" name ="details" />
                             <input className='date__form--details' type="text" name ="details" />
+                            <input className='note__form--details' type="text" name ="details" />
+                            <input className='note__form--details' type="text" name ="details" />
                             </div>
                             <div className='btn'>
-                            <button className='btn__add' type='text'> Add </button>
+                            <button className='btn__submit' type='text'> Submit </button>
                             <img src={editIcon} alt='editIcon'/>
                             <img src={deleteIcon} alt='deleteIcon'/>
                             </div>
@@ -107,9 +108,11 @@ const Dates = () => {
                             <input className='date__form--details' type="text" name ="details" />
                             <input className='date__form--details' type="text" name ="details" />
                             <input className='date__form--details' type="text" name ="details" />
+                            <input className='note__form--details' type="text" name ="details" />
+                            <input className='note__form--details' type="text" name ="details" />
                             </div>
                             <div className='btn'>
-                            <button className='btn__add' type='text'> Add </button>
+                            <button className='btn__submit' type='text'> Submit </button>
                             <img src={editIcon} alt='editIcon'/>
                             <img src={deleteIcon} alt='deleteIcon'/>
                             </div>
@@ -121,9 +124,11 @@ const Dates = () => {
                             <input className='date__form--details' type="text" name ="details" />
                             <input className='date__form--details' type="text" name ="details" />
                             <input className='date__form--details' type="text" name ="details" />
+                            <input className='note__form--details' type="text" name ="details" />
+                            <input className='note__form--details' type="text" name ="details" />
                             </div>
                             <div className='btn'>
-                            <button className='btn__add' type='text'> Add </button>
+                            <button className='btn__submit' type='text'> Submit </button>
                             <img src={editIcon} alt='editIcon'/>
                             <img src={deleteIcon} alt='deleteIcon'/>
                             </div>
@@ -135,9 +140,11 @@ const Dates = () => {
                             <input className='date__form--details' type="text" name ="details" />
                             <input className='date__form--details' type="text" name ="details" />
                             <input className='date__form--details' type="text" name ="details" />
+                            <input className='note__form--details' type="text" name ="details" />
+                            <input className='note__form--details' type="text" name ="details" />
                             </div>
                             <div className='btn'>
-                            <button className='btn__add' type='text'> Add </button>
+                            <button className='btn__submit' type='text'> Submit </button>
                             <img src={editIcon} alt='editIcon'/>
                             <img src={deleteIcon} alt='deleteIcon'/>
                             </div>
@@ -149,9 +156,11 @@ const Dates = () => {
                             <input className='date__form--details' type="text" name ="details" />
                             <input className='date__form--details' type="text" name ="details" />
                             <input className='date__form--details' type="text" name ="details" />
+                            <input className='note__form--details' type="text" name ="details" />
+                            <input className='note__form--details' type="text" name ="details" />
                             </div>
                             <div className='btn'>
-                            <button className='btn__add' type='text'> Add </button>
+                            <button className='btn__submit' type='text'> Submit </button>
                             <img src={editIcon} alt='editIcon'/>
                             <img src={deleteIcon} alt='deleteIcon'/>
                             </div>

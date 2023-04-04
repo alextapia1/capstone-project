@@ -12,9 +12,9 @@ export async function getDates() {
     }
 }   
 
-export async function postDate(newDate) {
+export async function postDate(addDate) {
     try{
-        const res = await axios.post(`${baseURL}/`,newDate)
+        const res = await axios.post(`${baseURL}/dates`, addDate)
         return res.data;
     } catch {
         return "Failed to add a new Date";
