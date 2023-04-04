@@ -14,16 +14,16 @@ const Dates = () => {
    
    
 
-        function handleSubmit(event) {
-           event.preventDefault();
+        function handleSubmit(e) {
+           e.preventDefault();
 
-           const form = event.target;
+           const form = e.target;
             console.log(form)
-        //    const inputvalues = [ 
-        //     form.category.value,
-        //     form.data.value
-        //     ]
-            // console.log(inputvalues)
+           const inputvalues =  {
+            // form.category.value,
+            data:data
+            }   
+            console.log(inputvalues)
             console.log(form.category)
             console.log(form.data)
 
@@ -36,9 +36,15 @@ const Dates = () => {
             .then(res => {
             console.log(res)
             
-            })
-        },[])
+            }).catch(error => console.log(error))
+        },[]);
             //render data
+
+         useEffect(() =>{
+            fetch('http://localhost:3000/dates')
+            .then(res => res.json())
+            .then(data => setData(data));
+         },);   
        
             
 
@@ -49,9 +55,10 @@ const Dates = () => {
             <form onSubmit={handleSubmit} className='date__form'>
               
                  <div className='date__form--title'>
-                            <label className='date__form--day'>{category.category}</label>
+                            <label className='date__form--day'>Monday</label>
                             <div className='date__form--info'>
-                            <input className='date__form--details' type="text" name ={data.data} />
+                            <input className='date__form--details' type="text" name ="data" 
+                            onChange={(e) => setData(e.target.value)}/>
                             <input className='date__form--details' type="text" name ={data.data} />
                             <input className='date__form--details' type="text" name ={data.data} />
                             </div>
@@ -65,7 +72,8 @@ const Dates = () => {
                 <div className='date__form--title'>
                             <label className='date__form--day'>Tuesday</label>
                             <div className='date__form--info'>
-                            <input className='date__form--details' type="text" name ="details" />
+                            <input className='date__form--details' type="text" name ="data" 
+                            onChange={(e) => setData(e.target.value)}/>
                             <input className='date__form--details' type="text" name ="details" />
                             <input className='date__form--details' type="text" name ="details" />
                             </div>
@@ -80,7 +88,8 @@ const Dates = () => {
                  <div className='date__form--title'>
                             <label className='date__form--day'>Wednesday</label>
                             <div className='date__form--info'>
-                            <input className='date__form--details' type="text" name ="details" />
+                            <input className='date__form--details' type="text" name ="data" 
+                            onChange={(e) => setData(e.target.value)}/>
                             <input className='date__form--details' type="text" name ="details" />
                             <input className='date__form--details' type="text" name ="details" />
                             </div>
