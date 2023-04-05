@@ -7,28 +7,39 @@ import { getDates, postDate } from '../../utils/apiRequest';
 
 const Dates = (props) => {
     const [item_id, setItem_id] = useState('');
-    const [category, setCategory] = useState('');
     const [data, setData] = useState([]);
-    const [complete, setComplete] = ('');
+  
    
     const {dateList} = props
 
-        function handleSubmit(e) {
+
+        function handleFormSubmit(e) {
            e.preventDefault();
 
            const form = e.target;
-            console.log(form)
-           const inputvalues =  {
-            // form.category.value,
-            data:data
-            }   
-            console.log(inputvalues)
-            console.log(form.category)
-            console.log(form.data)
 
-         }
-    
-         //get data
+           const item_id = form.item_id.value;
+           const task = form.data.value;
+           console.log(form)
+           console.log(task)
+           //    const inputvalues =  {
+               //     // form.category.value,
+               //     data:data
+               //     }   
+               //    console.log(inputvalues)
+               console.log(form.category)
+               console.log(form.data)
+               
+            }
+            
+            
+        //  if (!item_id || !task) {
+        //     //alerts are bad going to get ride of this
+        //     // alert('skip to next day ')
+        //     return true;
+        // }
+
+         //get date
          useEffect(() =>{
             getDates()
             .then(res => {
@@ -39,29 +50,33 @@ const Dates = (props) => {
             
         console.log(data)
         //post data
-            postDate()
-            .then((res) =>{
+            postDate() 
+              .then((res) =>{
             })
-        
+            
 
 
 
     return (
         <div className='date'>
-            <form onSubmit={handleSubmit} className='date__form'>
+            <form onSubmit={handleFormSubmit} className='date__form'>
               
                  <div className='date__form--title'>
                             <label className='date__form--day'>Monday</label>
                             <div className='date__form--info'>
                             <input className='date__form--details' type="text" placeholder = {!(data.length===0) ? data[0].data : '' }
                             onChange={(e) => data(e.target.value)}/>
-                            <input className='date__form--details' type="text" placeholder ={data.data} />
-                            <input className='date__form--details' type="text" name ="details" />
-                            <input className='date__form--details' type="text" name ="details" />
-                            <input className='date__form--details' type="text" name ="details" />
+                            <input className='date__form--details' type="text" value = {data.data} 
+                            onChange={(e) => setData(e.target.value)}/>
+                            <input className='date__form--details' type="text" value = {data.data}
+                            onChange={(e) => setData(e.target.value)} />
+                            <input className='date__form--details' type="text" value = {data.data}
+                            onChange={(e) => setData(e.target.value)} />
+                            <input className='date__form--details' type="text" value ={data.data}
+                            onChange={(e) => setData(e.target.value)} />
                             </div>
                             <div className='btn'>
-                            <button className='btn__submit' type='text' onChange={(e) => data(e.target.value)}> Submit </button>
+                            <button className='btn__submit' type='text' onChange={(e) => setData(e.target.value)}> Submit </button>
                             <img src={editIcon} alt='editIcon' type='text'/>
                             <img src={deleteIcon} alt='deleteIcon'/>
                             </div>
