@@ -32,8 +32,8 @@ export async function deleteDate(date_ItemId){
 
 export async function patchDate(editDate){
     try{
-        const res = await axios.patch(`${baseURL}/${editDate}`)
-        return res;
+        const res = await axios.patch(`${baseURL}/dates`, editDate)
+        return res.data;
     } catch {
         return "Failed to edit Date"
     }
