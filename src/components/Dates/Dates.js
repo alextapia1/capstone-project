@@ -16,6 +16,12 @@ const Dates = (props) => {
     //form submit
   function handleSubmit(e) {    
     e.preventDefault();
+    //clear from fields
+    setInputFirst();
+    setInputSecond();
+    setInputThird();
+    e.target.reset();
+    
 
     //sending empty array to handle multi handleSubmits
   const inputArray = [inputFirst,inputSecond,inputThird];
@@ -26,7 +32,7 @@ const Dates = (props) => {
            newArray.push(inputArray[i])
         } 
         
-    }
+    } 
 
     console.log(newArray)
 
@@ -44,7 +50,7 @@ const Dates = (props) => {
   const handleFirstChange = (e) => {
     e.preventDefault()
      setInputFirst(e.target.value)
-  }
+  } 
   const handleSecondChange = (e) => {
     e.preventDefault()
      setInputSecond(e.target.value)
@@ -113,20 +119,17 @@ const Dates = (props) => {
               className="date__form--details" 
               type="text" 
               name="data" 
-              onChange={handleThirdChange}
-              value={inputSecond}/>
+              />
             <input 
               className="date__form--details" 
               type="text" 
               name="data" 
-              onChange={handleThirdChange}
-              value={inputSecond}/>
+             />
             <input 
               className="date__form--details" 
               type="text" 
               name="data" 
-              onChange={handleThirdChange}
-              value={inputThird}/>  
+              />  
           </div>
           <div className="btn">
             <button className="btn__submit" type="text">
@@ -145,20 +148,17 @@ const Dates = (props) => {
               className="date__form--details" 
               type="text" 
               name="data" 
-              onChange={handleThirdChange}
-              value={inputSecond}/>
+              />
             <input 
               className="date__form--details" 
               type="text" 
               name="data" 
-              onChange={handleThirdChange}
-              value={inputSecond}/>
+             />
             <input 
               className="date__form--details" 
               type="text" 
               name="data" 
-              onChange={handleThirdChange}
-              value={inputThird}/>    
+             />    
             
           </div>
           <div className="btn">
@@ -178,20 +178,17 @@ const Dates = (props) => {
               className="date__form--details" 
               type="text" 
               name="data" 
-              onChange={handleThirdChange}
-              value={inputFirst}/>
+             />
            <input 
               className="date__form--details" 
               type="text" 
               name="data" 
-              onChange={handleThirdChange}
-              value={inputSecond}/>
+             />
             <input 
               className="date__form--details" 
               type="text" 
               name="data" 
-              onChange={handleThirdChange}
-              value={inputThird}/>          
+              />          
           </div>
           <div className="btn">
             <button className="btn__submit" type="text">
@@ -210,20 +207,17 @@ const Dates = (props) => {
               className="date__form--details" 
               type="text" 
               name="data" 
-              onChange={handleThirdChange}
-              value={inputFirst}/>
+             />
             <input 
               className="date__form--details" 
               type="text" 
               name="data" 
-              onChange={handleThirdChange}
-              value={inputSecond}/>
+              />
             <input 
               className="date__form--details" 
               type="text" 
               name="data" 
-              onChange={handleThirdChange}
-              value={inputThird}/>  
+              />  
           </div>
           <div className="btn">
             <button className="btn__submit" type="text">
@@ -242,20 +236,17 @@ const Dates = (props) => {
               className="date__form--details" 
               type="text" 
               name="data" 
-              onChange={handleThirdChange}
-              value={inputFirst}/>
+              />
             <input 
               className="date__form--details" 
               type="text" 
               name="data" 
-              onChange={handleThirdChange}
-              value={inputSecond}/>  
+              />  
             <input 
               className="date__form--details" 
               type="text" 
               name="data" 
-              onChange={handleThirdChange}
-              value={inputThird}/>   
+              />   
           </div>
           <div className="btn">
             <button className="btn__submit" type="text">
@@ -274,20 +265,17 @@ const Dates = (props) => {
               className="date__form--details" 
               type="text" 
               name="data" 
-              onChange={handleThirdChange}
-              value={inputFirst}/>
+              />
             <input 
               className="date__form--details" 
               type="text" 
               name="data" 
-              onChange={handleThirdChange}
-              value={inputSecond}/>
+              />
             <input 
               className="date__form--details" 
               type="text" 
               name="data" 
-              onChange={handleThirdChange}
-              value={inputThird}/>  
+              />  
           </div>
           <div className="btn">
             <button className="btn__submit" type="text">

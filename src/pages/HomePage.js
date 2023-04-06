@@ -8,10 +8,6 @@ const HomePage = () => {
     const [dateList, setDateList] = useState([]);
     const [featuredNote, setFeaturedNote] = useState();
 
-    useEffect(()  =>{
-        //make api request call
-    })
-
     return (
         <div className="home">
             <Dates dateList={dateList}/>

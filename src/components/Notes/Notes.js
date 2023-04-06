@@ -63,8 +63,8 @@ const Notes = () => {
                         <div className='note__form--title'>
                             <label className='note__form--date'>Pending</label>
                             <div className='note__form--info'>
-                            <input className='note__form--details' type="text" name ="details" />
-                            <input className='note__form--details' type="text" name ="details" />
+                            <input className='note__form--details' type="text" placeholder ="capstone" />
+                            <input className='note__form--details' type="text" placeholder ="reading a chapter" />
                             <input className='note__form--details' type="text" name ="details" />
                             <input className='note__form--details' type="text" name ="details" />
                             <input className='note__form--details' type="text" name ="details" />
