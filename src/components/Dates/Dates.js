@@ -11,7 +11,7 @@ const Dates = (props) => {
   const [inputThird, setInputThird] = useState('');
   const [selectOption, setSelectOption] = useState('');
 
-  const { dateList } = props;
+  const { dateList, completed, inputArray } = props;
     //form submit
   function handleSubmit(e) {    
     e.preventDefault();
@@ -72,6 +72,11 @@ const Dates = (props) => {
       .catch((error) => console.log(error));
   }, []);
 
+  // { completed ? 
+  //   inputArray.map((element, index) => <p key={index}>{element}</p>) : 
+  //   <p>This task is not completed.</p>
+  // }
+
   // function DropdownFilter() {
   //   const [options, setOptions] = useState([
   //     'option1',
@@ -111,7 +116,6 @@ const Dates = (props) => {
             <input 
               className="date__form--details" 
               type="text" 
-              name="data" 
               onChange={handleThirdChange}
               value={inputThird}/>
             <input 

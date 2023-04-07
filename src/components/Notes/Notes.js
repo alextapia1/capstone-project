@@ -83,16 +83,19 @@ const newArray = []
 
                             <label className='note__form--date'>Grocery List</label>
                             <div className='note__form--info'>
-                            <input className='note__form--details'
-                             type="text" placeholder={info.length !== 0 ? info[0].info : ""}
+                            <input 
+                            className='note__form--details'
+                             type="text" 
                              onChange={handleFirstChange}
                              value={inputFirst} />
-                             <input className='note__form--details'
-                             type="text" placeholder={info.length !== 0 ? info[1].info : ""}
+                             <input 
+                             className='note__form--details'
+                             type="text" 
                              onChange={handleSecondChange}
                              value={inputSecond} />
-                             <input className='note__form--details'
-                             type="text" placeholder={info.length !== 0 ? info[2].info : ""}
+                             <input 
+                             className='note__form--details'
+                             type="text" 
                              onChange={handleThirdChange}
                              value={inputThird} />
                             </div>
