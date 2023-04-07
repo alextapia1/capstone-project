@@ -61,9 +61,6 @@ const newArray = []
      setInputThird(e.target.value)
   }
 
-  //const value = e.target.value; 
-  //setInput({...input,[e.target.value]:value});
-
   //get date
   useEffect(() => {
     getDates()
@@ -101,7 +98,7 @@ const newArray = []
                             </div>
                             <div className='btn'>
                             <img src={editIcon} alt='editIcon' type='text'/>
-                            <button className='btn__submit' type='text'> Submit </button>
+                            <button className='btn__submit' type='text'> Add </button>
 
                             </div>
                         </div>
@@ -124,7 +121,7 @@ const newArray = []
                             </div>
                             <div className='btn'>
                             <img src={editIcon} alt='editIcon' type='text'/>
-                            <button className='btn__submit' type='text'> Submit </button>
+                            <button className='btn__submit' type='text'> Add </button>
                             
                             </div>
                         </div>
@@ -147,7 +144,7 @@ const newArray = []
                             </div>
                             <div className='btn'>
                             <img src={editIcon} alt='editIcon' type='text'/>
-                            <button className='btn__submit' type='text'> Submit </button>
+                            <button className='btn__submit' type='text'> Add </button>
 
                             </div>
                         </div>
@@ -170,7 +167,7 @@ const newArray = []
                             </div>
                             <div className='btn'>
                             <img src={editIcon} alt='editIcon' type='text'/>
-                            <button className='btn__submit' type='text'> Submit </button>
+                            <button className='btn__submit' type='text'> Add </button>
                             </div>
                             
                         </div>

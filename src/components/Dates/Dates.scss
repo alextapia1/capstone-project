@@ -45,11 +45,13 @@
 &__form--info{
     display: flex;
     flex-direction: column;
+    gap: 0.3rem;
  }
 &__form--day{
     font-size: 1rem;
     line-height: 1.125rem;
     margin-bottom: 0;
+    padding-bottom: 0.3rem;
  }
 &__form--date{
     padding-bottom: 0.3125rem;
@@ -60,7 +62,6 @@
     display: flex;
     padding-top: 0.5rem;
     color: aliceblue;
-    justify-content: space-between;
     gap: 0.3rem;
 
 

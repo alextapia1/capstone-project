@@ -39,6 +39,10 @@
         flex-direction: row;
         flex-wrap: wrap;
     }
+
+    @include desktop{
+        justify-content: space-around;
+    }
  }
 
 &__form--title{
@@ -58,6 +62,7 @@
 &__form--info{
     display: flex;
     flex-direction: column;
+    gap: 0.3rem;
  }
 &__form--day{
     font-size: 1rem;
