@@ -10,21 +10,21 @@ const Notes = () => {
 const[info, setInfo] = useState ('');
 const[groceryList, setGroceryList] = useState ('');
 const[events, setEvents] = useState ('');
-const[pending, setPending] = useState ('');
+const[notes, setNotes] = useState('');
 const [inputFirst, setInputFirst] = useState('');
-const [inputSecond, setInputSecond] = useState('');
-const [inputThird, setInputThird] = useState('');
+// const [inputSecond, setInputSecond] = useState('');
+// const [inputThird, setInputThird] = useState('');
 
 function handleSubmit(e) {    
     e.preventDefault();
     //clear from fields
     setInputFirst();
-    setInputSecond();
-    setInputThird();
+    // setInputSecond();
+    // setInputThird();
     e.target.reset();
 
     //sending empty array to handle multi handleSubmits
-const inputArray = [inputFirst,inputSecond];
+const inputArray = [inputFirst];
 const newArray = []
   
       for(let i =0; i <inputArray.length; i++) {
@@ -52,14 +52,14 @@ const newArray = []
     e.preventDefault()
      setInputFirst(e.target.value)
   } 
-  const handleSecondChange = (e) => {
-    e.preventDefault()
-     setInputSecond(e.target.value)
-  }
-  const handleThirdChange = (e) => {
-    e.preventDefault()
-     setInputThird(e.target.value)
-  }
+  // const handleSecondChange = (e) => {
+  //   e.preventDefault()
+  //    setInputSecond(e.target.value)
+  // }
+  // const handleThirdChange = (e) => {
+  //   e.preventDefault()
+  //    setInputThird(e.target.value)
+  // }
 
   //get date
   useEffect(() => {
@@ -70,61 +70,48 @@ const newArray = []
       .catch((error) => console.log(error));
   }, []);
 
-
+  const chooseOption =[groceryList, notes, events]
+ 
+  const filteredItems =chooseOption.filter((inputArray) => !inputArray);
 
 
 
     return (
         <div className='note'>
                 <div className='note__memo'>
-                    <h2 className='note__title'></h2> </div>   
-                <card className='note__form--title'>
+                    <h2 className='note__bar'></h2> </div>   
+                <card className='note__title'>  
                   <h1>Grocery List</h1>
-                   //////loop
-                      //div   flex row  info 90% status 8%           
-                          <h2 className='note__form--info' >info</h2>
+                    <div className='note__duo'>
+                          <h2 className='note__info' >info{chooseOption[0]}</h2> 
                           <input type='checkbox' value='completed'></input>
-                      ///div
-                    ////finish
+                          <ul>
+                                {filteredItems.map(item => (
+                                  <li key={item}>{item}</li>
+                                ))}
+                              </ul>   
+                          </div>
                 </card>
-                <card className='note__form--title'>
+
+                <card className='note__title'>
                   <h1>Notes</h1>
-                  
-                  //////loop
-                      //div   flex row  info 90% status 8%           
-                          <h2 className='note__form--info' >info</h2>
+                          <div className='note__duo'>
+                          <h2 className='note__info' >info</h2>
                           <input type='checkbox' value='completed'></input>
-                      ///div
-                    ////finish
+                          </div>
                 </card>
-                <card className='note__form--title'>
+                <card className='note__title'>
                   <h1>Events</h1>
-                  
                   //////loop
                       //div   flex row  info 90% status 8%           
-                          <h2 className='note__form--info' >info</h2>
+                          <h2 className='note__nfo' >info</h2>
                           <input type='checkbox' value='completed'></input>
                       ///div
                     ////finish
                 </card>
+
             <form onSubmit={handleSubmit} className='note__form'>
-            <div className='note__form--title'>
-
-                            <label className='note__form--date'>Grocery List</label>
-                            <div className='note__form--info'>
-                            <input 
-                            className='note__form--details'
-                             type="text" 
-                             onChange={handleFirstChange}
-                             value={inputFirst} />
-                            </div>
-                            <div className='btn'>
-                            <img src={editIcon} alt='editIcon' type='text'/>
-                            <button className='btn__submit' type='text'> Add </button>
-
-                            </div>
-                        </div>
-
+        
                         <div className='note__form--title'>
                             <label className='note__form--date'>Notes</label>
                             <div className='note__form--info'>
@@ -134,44 +121,12 @@ const newArray = []
                              value={inputFirst} />
                   
                             </div>
-                            <div className='btn'>
-                            <img src={editIcon} alt='editIcon' type='text'/>
-                            <button className='btn__submit' type='text'> Add </button>
-                            
-                            </div>
-                        </div>
-
-                        <div className='note__form--title'>
-                            <label className='note__form--date'>Events</label>
-                            <div className='note__form--info'>
-                            <input className='note__form--details'
-                             type="text" placeholder={info.length !== 0 ? info[0].info : ""}
-                             onChange={handleFirstChange}
-                             value={inputFirst} />
-                            
-                            </div>
-                            <div className='btn'>
-                            <img src={editIcon} alt='editIcon' type='text'/>
-                            <button className='btn__submit' type='text'> Add </button>
-
-                            </div>
-                        </div>
-
-                        <div className='note__form--title'>
-                            <label className='note__form--date'>Pending</label>
-                            <div className='note__form--info'>
-                            <input className='note__form--details'
-                             type="text" placeholder={info.length !== 0 ? info[0].info : ""}
-                             onChange={handleFirstChange}
-                             value={inputFirst} />
-                             
-                            </div>
-                            <div className='btn'>
-                            <img src={editIcon} alt='editIcon' type='text'/>
-                            <button className='btn__submit' type='text'> Add </button>
-                            </div>
                             
                         </div>
+
+                       
+
+                      
 
             </form>
         </div>

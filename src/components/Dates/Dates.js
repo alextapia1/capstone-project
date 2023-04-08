@@ -114,7 +114,6 @@ const Dates = (props) => {
               <option value="Grocery List">Grocery List</option>
               <option value="Notes">Notes</option>
               <option value="Events">Events</option>
-              <option value="Pending">Pending</option>
             </select>
           </label>
           
