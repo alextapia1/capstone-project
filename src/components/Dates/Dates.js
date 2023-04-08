@@ -18,12 +18,12 @@ const Dates = (props) => {
     //clear from fields
     setInputFirst();
     setInputSecond();
-    setInputThird();
+
     e.target.reset();
     
 
     //sending empty array to handle multi handleSubmits
-  const inputArray = [inputFirst,inputSecond,inputThird];
+  const inputArray = [inputFirst,inputSecond,selectOption];
   const newArray = []
 
     for(let i =0; i <inputArray.length; i++) {
@@ -33,7 +33,7 @@ const Dates = (props) => {
         
     } 
 
-    console.log(newArray)
+    console.log(newArray )
 
     const postObj = {
         daily: newArray,
@@ -61,6 +61,7 @@ const Dates = (props) => {
   //for dropdown list
   const handleChange = e => {
     setSelectOption(e.target.value)
+    
   }
 
   //get date
@@ -106,48 +107,24 @@ const Dates = (props) => {
               onChange={handleFirstChange}
               value={inputFirst}
             />
-            <input 
-              className="date__form--details" 
-              type="text" 
-              name="data" 
-              onChange={handleSecondChange}
-              value={inputSecond}/>
 
-            <input 
-              className="date__form--details" 
-              type="text" 
-              onChange={handleThirdChange}
-              value={inputThird}/>
-            <input 
-              className="date__form--details" 
-              type="text" 
-              name="data" 
-              />
-            <input 
-              className="date__form--details" 
-              type="text" 
-              name="data" 
-              />
            <label htmlFor="notesInput">
               <select id="dropdown" value={selectOption} onChange={handleChange}>
               <option value="option1">--Please choose an option--</option>
-              <option value="option2">Grocery List</option>
-              <option value="option3">Notes</option>
-              <option value="option4">Events</option>
-              <option value="option5">Pending</option>
+              <option value="Grocery List">Grocery List</option>
+              <option value="Notes">Notes</option>
+              <option value="Events">Events</option>
+              <option value="Pending">Pending</option>
             </select>
-              
           </label>
           
-              
-
-           
+   
           </div>
           <div className="btn">
             <img src={editIcon} alt="editIcon" type="text" />
             <button className="btn__submit" type="submit">
               {" "}
-              Add{" "}
+              Submit{" "}
             </button>
            
           </div>

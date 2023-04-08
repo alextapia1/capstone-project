@@ -78,6 +78,35 @@ const newArray = []
         <div className='note'>
                 <div className='note__memo'>
                     <h2 className='note__title'></h2> </div>   
+                <card className='note__form--title'>
+                  <h1>Grocery List</h1>
+                   //////loop
+                      //div   flex row  info 90% status 8%           
+                          <h2 className='note__form--info' >info</h2>
+                          <input type='checkbox' value='completed'></input>
+                      ///div
+                    ////finish
+                </card>
+                <card className='note__form--title'>
+                  <h1>Notes</h1>
+                  
+                  //////loop
+                      //div   flex row  info 90% status 8%           
+                          <h2 className='note__form--info' >info</h2>
+                          <input type='checkbox' value='completed'></input>
+                      ///div
+                    ////finish
+                </card>
+                <card className='note__form--title'>
+                  <h1>Events</h1>
+                  
+                  //////loop
+                      //div   flex row  info 90% status 8%           
+                          <h2 className='note__form--info' >info</h2>
+                          <input type='checkbox' value='completed'></input>
+                      ///div
+                    ////finish
+                </card>
             <form onSubmit={handleSubmit} className='note__form'>
             <div className='note__form--title'>
 
@@ -88,16 +117,6 @@ const newArray = []
                              type="text" 
                              onChange={handleFirstChange}
                              value={inputFirst} />
-                             <input 
-                             className='note__form--details'
-                             type="text" 
-                             onChange={handleSecondChange}
-                             value={inputSecond} />
-                             <input 
-                             className='note__form--details'
-                             type="text" 
-                             onChange={handleThirdChange}
-                             value={inputThird} />
                             </div>
                             <div className='btn'>
                             <img src={editIcon} alt='editIcon' type='text'/>
@@ -113,14 +132,7 @@ const newArray = []
                              type="text" placeholder={info.length !== 0 ? info[0].info : ""}
                              onChange={handleFirstChange}
                              value={inputFirst} />
-                             <input className='note__form--details'
-                             type="text" placeholder={info.length !== 0 ? info[1].info : ""}
-                             onChange={handleSecondChange}
-                             value={inputSecond} />
-                             <input className='note__form--details'
-                             type="text" placeholder={info.length !== 0 ? info[2].info : ""}
-                             onChange={handleThirdChange}
-                             value={inputThird} />
+                  
                             </div>
                             <div className='btn'>
                             <img src={editIcon} alt='editIcon' type='text'/>
@@ -136,14 +148,7 @@ const newArray = []
                              type="text" placeholder={info.length !== 0 ? info[0].info : ""}
                              onChange={handleFirstChange}
                              value={inputFirst} />
-                             <input className='note__form--details'
-                             type="text" placeholder={info.length !== 0 ? info[1].info : ""}
-                             onChange={handleSecondChange}
-                             value={inputSecond} />
-                             <input className='note__form--details'
-                             type="text" placeholder={info.length !== 0 ? info[2].info : ""}
-                             onChange={handleThirdChange}
-                             value={inputThird} />
+                            
                             </div>
                             <div className='btn'>
                             <img src={editIcon} alt='editIcon' type='text'/>
@@ -159,14 +164,7 @@ const newArray = []
                              type="text" placeholder={info.length !== 0 ? info[0].info : ""}
                              onChange={handleFirstChange}
                              value={inputFirst} />
-                             <input className='note__form--details'
-                             type="text" placeholder={info.length !== 0 ? info[1].info : ""}
-                             onChange={handleSecondChange}
-                             value={inputSecond} />
-                             <input className='note__form--details'
-                             type="text" placeholder={info.length !== 0 ? info[2].info : ""}
-                             onChange={handleThirdChange}
-                             value={inputThird} />
+                             
                             </div>
                             <div className='btn'>
                             <img src={editIcon} alt='editIcon' type='text'/>
