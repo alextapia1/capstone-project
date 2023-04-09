@@ -33,8 +33,6 @@ const Dates = (props) => {
         
     } 
 
-    console.log(newArray )
-
     const postObj = {
         daily: newArray,
     };

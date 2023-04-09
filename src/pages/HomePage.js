@@ -2,24 +2,25 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import Dates from "../components/Dates/Dates";
 import Notes from "../components/Notes/Notes";
-import { getDates, postDate } from "../utils/apiRequest";
+
 
 
 const HomePage = () => {
     const [dateList, setDateList] = useState([]);
     const [featuredNote, setFeaturedNote] = useState();
     const [info, setInfo] = useState ('');
-    const [selectedDate, setSelectedDate] = useState(null);
-
-  //get date
-  useEffect(() => {
-    getDates()
+ 
+    
+    //get date
+    useEffect(() => {
+      axios.get('http://localhost:8080/dates')
       .then((res) => {
         setInfo(res);
       })
       .catch((error) => console.log(error));
-  }, []);
-
+    }, [setInfo]);
+    
+    console.log(info, 'another one')
 
     return (
         <div className="home">
