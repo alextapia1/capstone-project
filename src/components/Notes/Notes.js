@@ -1,17 +1,20 @@
 import React from 'react';
 import '../Notes/Notes.scss';
-import editIcon from "../../assets/edit-24px.svg";
 import { useEffect, useState } from 'react';
 import { getDates, postDate } from "../../utils/apiRequest";
+import { useActionData } from 'react-router-dom';
 
 
 const Notes = () => {
 
-const[info, setInfo] = useState ('');
-const[groceryList, setGroceryList] = useState ('');
-const[events, setEvents] = useState ('');
-const[notes, setNotes] = useState('');
+const [info, setInfo] = useState ('');
+const [groceryList, setGroceryList] = useState ('');
+const [events, setEvents] = useState ('');
+const [notes, setNotes] = useState('');
 const [inputFirst, setInputFirst] = useState('');
+
+
+
 // const [inputSecond, setInputSecond] = useState('');
 // const [inputThird, setInputThird] = useState('');
 
@@ -35,6 +38,18 @@ const newArray = []
       } 
   
       console.log(newArray)
+//loop through options
+  const chooseOption = [groceryList, notes, events];
+
+  const myLoop = () => {
+    const result = [];
+    for(let i = 0; i <chooseOption.length; i++){
+      result.push(<p>{chooseOption[i]}</p>)
+    }
+      return result;
+  }  
+  
+
   
     const postObj = {
           daily: newArray,
@@ -70,9 +85,8 @@ const newArray = []
       .catch((error) => console.log(error));
   }, []);
 
-  const chooseOption =[groceryList, notes, events]
- 
-  const filteredItems =chooseOption.filter((inputArray) => !inputArray);
+  
+
 
 
 
@@ -80,28 +94,29 @@ const newArray = []
         <div className='note'>
                 <div className='note__memo'>
                     <h2 className='note__bar'></h2> </div>   
-                <card className='note__title'>  
+                <card className='note__title'> 
+
                   <h1>Grocery List</h1>
+                       {myLoop}
                     <div className='note__duo'>
-                          <h2 className='note__info' >info{chooseOption[0]}</h2> 
+                          <h2 className='note__info' >info</h2> 
                           <input type='checkbox' value='completed'></input>
-                          <ul>
-                                {filteredItems.map(item => (
-                                  <li key={item}>{item}</li>
-                                ))}
-                              </ul>   
+                            
                           </div>
                 </card>
 
                 <card className='note__title'>
                   <h1>Notes</h1>
+                       {myLoop}
                           <div className='note__duo'>
                           <h2 className='note__info' >info</h2>
                           <input type='checkbox' value='completed'></input>
                           </div>
                 </card>
+
                 <card className='note__title'>
                   <h1>Events</h1>
+                        {myLoop}
                   //////loop
                       //div   flex row  info 90% status 8%           
                           <h2 className='note__nfo' >info</h2>
