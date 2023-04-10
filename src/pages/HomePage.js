@@ -8,19 +8,19 @@ import Notes from "../components/Notes/Notes";
 const HomePage = () => {
     const [dateList, setDateList] = useState([]);
     const [featuredNote, setFeaturedNote] = useState('');
-    const [info, setInfo] = useState ('');
+    const [info, setInfo] = useState ([]);
  
     
     //get date
-    useEffect(() => {
-      axios.get('http://localhost:8080/dates')
-      .then((res) => {
-        setInfo(res);
-      })
-      .catch((error) => console.log(error));
-    }, [setInfo]);
+    // useEffect(() => {
+    //   axios.get('http://localhost:8080/dates')
+    //   .then((res) => {
+    //     console.log(res.data[0].info)
+    //     setInfo(res);
+    //   }) 
+    //   .catch((error) => console.log(error));
+    // }, [setInfo]);
     
-    console.log(info, 'another one')
 
     const onSearchChange = (e) =>{
       setInfo(e.target.value);
@@ -28,8 +28,8 @@ const HomePage = () => {
 
     return (
         <div className="home">
-            <Dates dateList={dateList}/>
-            <Notes featuredNote={featuredNote} onSearchChange={onSearchChange}/> 
+            <Dates dateList={dateList} info={info} setInfo={setInfo} />
+            <Notes featuredNote={featuredNote} onSearchChange={onSearchChange} info={info} setInfo={setInfo}/> 
         </div>
     )
 }

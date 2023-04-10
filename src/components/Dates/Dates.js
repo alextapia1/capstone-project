@@ -3,15 +3,15 @@ import "../Dates/Dates.scss";
 import { useEffect, useState } from "react";
 import editIcon from "../../assets/edit-24px.svg";
 import { getDates, postDate } from "../../utils/apiRequest";
+import axios from "axios";
 
-const Dates = (props) => {
-  const [info, setInfo] = useState([]);
+const Dates = ({info, setInfo}) => {
+  // const [info, setInfo] = useState([]);
   const [inputFirst, setInputFirst] = useState('');
   const [inputSecond, setInputSecond] = useState('');
   const [inputThird, setInputThird] = useState('');
   const [selectOption, setSelectOption] = useState('');
 
-  const { dateList, completed, inputArray } = props;
     //form submit
   function handleSubmit(e) {    
     e.preventDefault();
@@ -37,11 +37,19 @@ const Dates = (props) => {
         daily: newArray,
     };
 
-  
-
     //  post data
-    postDate(postObj);
+    // setInfo([...info, postDate(postObj)]);
+      // setInfo([])
     
+    //  post data
+    // setInfo([...info, postDate(postObj)]);
+    axios.post('http://localhost:8080/dates', postObj)
+    .then((res) => {
+         console.log(res)
+         setInfo([...info, res.data]);
+       }) 
+       .catch((error) => console.log(error));
+
   }
   //for each input
   const handleFirstChange = (e) => {

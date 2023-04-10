@@ -14,7 +14,9 @@ export async function getDates() {
 
 export async function postDate(addDate) {
     try{
+        
         const res = await axios.post(`${baseURL}/dates`, addDate)
+        console.log(res.data)
         return res.data;
     } catch {
         return "Failed to add a new Date";
