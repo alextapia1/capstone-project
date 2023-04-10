@@ -71,26 +71,6 @@ const Dates = (props) => {
       .catch((error) => console.log(error));
   }, []);
 
-  // { completed ? 
-  //   inputArray.map((element, index) => <p key={index}>{element}</p>) : 
-  //   <p>This task is not completed.</p>
-  // }
-
-  // function DropdownFilter() {
-  //   const [options, setOptions] = useState([
-  //     'option1',
-  //     'groceryList',
-  //     'notes',
-  //     'events',
-  //     'pending'
-  //   ]);
-  //   const [filteredOptions, setFilteredOptions] = useState(options);
-  
-  //   const handleFilterChange = (event) => {
-  //     const value = event.target.value.toLowerCase();
-  //     const filtered = options.filter((option) => option.toLowerCase().includes(value));
-  //     setFilteredOptions(filtered);
-  //   };
 
 
   return (

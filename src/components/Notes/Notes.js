@@ -6,53 +6,17 @@ import { useActionData } from 'react-router-dom';
 import axios from 'axios';
 
 
-const Notes = () => {
+const Notes = (props) => {
 
 const [info, setInfo] = useState ('');
 const [groceryList, setGroceryList] = useState ('');
 const [events, setEvents] = useState ('');
 const [notes, setNotes] = useState('');
 const [inputFirst, setInputFirst] = useState('');
+const [onSearchChange, setOnSearchChange] = useState('');
 
 
-// function handleSubmit(e) {    
-//     e.preventDefault();
-//     //clear from fields
-//     setInputFirst();
-   
-//     e.target.reset();
-
-//     //sending empty array to handle multi handleSubmits
-// const inputArray = [inputFirst];
-// const newArray = []
-  
-//       for(let i =0; i <inputArray.length; i++) {
-//         if (inputArray[i]){
-//              newArray.push(inputArray[i])
-//           } 
-          
-//       } 
-  
-//       console.log(newArray)
-
-//loop through options
   const chooseOption = [groceryList, notes, events];
-
-   //const postObj = {
-   //       daily: newArray,
-     // };
-  
-      //  post data
-     // postDate(postObj);
-          
-
-//}
-
- //for each input
-//  const handleFirstChange = (e) =>
-//     e.preventDefault()
-//      setInputFirst(e.target.value)
-//   } 
 
   //get date
   useEffect(() => {
@@ -63,7 +27,9 @@ const [inputFirst, setInputFirst] = useState('');
       .catch((error) => console.log(error));
   }, []);
 
-  
+      const handleChange = (e) => {
+         onSearchChange(e.target.value)
+      }
 
     return (
         <div className='note'>
@@ -74,25 +40,26 @@ const [inputFirst, setInputFirst] = useState('');
                   <h1>Grocery List</h1>
                     <div className='note__duo'>
                             <h2 className='note__info' >info</h2> 
-                            <input type='checkbox' value='completed'></input>
+                            <input type='checkbox' value='completed'
+                             onChange={props.onSearchChange}/>
                           </div>
                 </section>
 
                 <section className='note__title'>
                   <h1>Notes</h1>
-                    
                           <div className='note__duo'>
                             <h2 className='note__info' >info</h2>
-                            <input type='checkbox' value='completed'></input>
+                            <input type='checkbox' value='completed'
+                            onChange={props.onSearchChange}/>
                           </div>
                 </section>
 
                 <section className='note__title'>
                   <h1>Events</h1>
-                       
                           <div className='note__duo'>
                             <h2 className='note__nfo' >info</h2>
-                            <input type='checkbox' value='completed'></input>
+                            <input type='checkbox' value='completed'
+                             onChange={props.onSearchChange}/>
                           </div>
                 </section>
 

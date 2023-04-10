@@ -10,6 +10,7 @@
     display: flex;
     justify-content: space-around;
     color: navy;
+    align-items: baseline;
     
     @include desktop{
         justify-content: space-between;
@@ -19,5 +20,6 @@
 &__social{
     font-size: 15px;
     line-height: 18px;
+    color: navy;
 }    
 }

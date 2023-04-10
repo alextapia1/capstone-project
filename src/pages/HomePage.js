@@ -7,7 +7,7 @@ import Notes from "../components/Notes/Notes";
 
 const HomePage = () => {
     const [dateList, setDateList] = useState([]);
-    const [featuredNote, setFeaturedNote] = useState();
+    const [featuredNote, setFeaturedNote] = useState('');
     const [info, setInfo] = useState ('');
  
     
@@ -22,10 +22,14 @@ const HomePage = () => {
     
     console.log(info, 'another one')
 
+    const onSearchChange = (e) =>{
+      setInfo(e.target.value);
+    }
+
     return (
         <div className="home">
             <Dates dateList={dateList}/>
-            <Notes featuredNote={featuredNote}/> 
+            <Notes featuredNote={featuredNote} onSearchChange={onSearchChange}/> 
         </div>
     )
 }

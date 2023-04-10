@@ -4,9 +4,9 @@ import '../Footer/Footer.scss';
 const Footer = () => {
     return (
         <footer className='footer'>
-            <p className='footer__social'>Twitter</p>
-            <p className='footer__social'>LinkedIn</p>
-            <p className='footer__social'>Github</p>
+                <a href="https://twitter.com/alex7apia" className='footer__social'>Twitter</a>
+                <a href="https://www.linkedin.com/in/alex-tapia-/" className='footer__social'>LinkedIn</a>
+                <a href="https://github.com/alextapia1" className='footer__social'>GitHub</a>
             <p className='footer__text'>© AKM Inc. All Rights Reserved.</p>
         </footer>
     );
