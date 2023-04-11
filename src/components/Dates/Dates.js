@@ -6,7 +6,7 @@ import { getDates, postDate } from "../../utils/apiRequest";
 import axios from "axios";
 
 const Dates = ({info, setInfo}) => {
-  // const [info, setInfo] = useState([]);
+  
   const [inputFirst, setInputFirst] = useState('');
   const [inputSecond, setInputSecond] = useState('');
   const [inputThird, setInputThird] = useState('');

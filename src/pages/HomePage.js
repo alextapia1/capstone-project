@@ -11,16 +11,6 @@ const HomePage = () => {
     const [info, setInfo] = useState ([]);
  
     
-    //get date
-    // useEffect(() => {
-    //   axios.get('http://localhost:8080/dates')
-    //   .then((res) => {
-    //     console.log(res.data[0].info)
-    //     setInfo(res);
-    //   }) 
-    //   .catch((error) => console.log(error));
-    // }, [setInfo]);
-    
 
     const onSearchChange = (e) =>{
       setInfo(e.target.value);
