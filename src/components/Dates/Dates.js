@@ -38,11 +38,6 @@ const Dates = ({info, setInfo}) => {
     };
 
     //  post data
-    // setInfo([...info, postDate(postObj)]);
-      // setInfo([])
-    
-    //  post data
-    // setInfo([...info, postDate(postObj)]);
     axios.post('http://localhost:8080/dates', postObj)
     .then((res) => {
          console.log(res)
@@ -106,7 +101,7 @@ const Dates = ({info, setInfo}) => {
    
           </div>
           <div className="btn">
-            <img src={editIcon} alt="editIcon" type="text" />
+            <button className="btn__edit">edit</button>
             <button className="btn__submit" type="submit">
               {" "}
               Submit{" "}

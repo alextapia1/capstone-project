@@ -12,7 +12,8 @@ const Notes = ({info, setInfo}) => {
 const [groceryList, setGroceryList] = useState ('');
 const [events, setEvents] = useState ('');
 const [notes, setNotes] = useState('');
-const [onSearchChange, setOnSearchChange] = useState('');
+const [onEdit, setOnEdit] = useState('');
+const [finished, setFinished] = useState('');
 
 
   const chooseOption = [groceryList, notes, events];
@@ -27,8 +28,8 @@ const [onSearchChange, setOnSearchChange] = useState('');
       .catch((error) => console.log(error));
   }, []);
 
-      // const handleChange = (e) => {
-      //    onSearchChange(e.target.value)
+      // const handleEdit = (e) => {
+      //    onClick(e.target.value)
       // }
       //filter through dropdown list
    const filteredGroceryList = info.filter((option) => option.category === "Grocery List");
@@ -47,7 +48,8 @@ const [onSearchChange, setOnSearchChange] = useState('');
                   {filteredGroceryList.map((option) => (
                     <div className='note__duo' key={option.item_id}>
                             <h2 className='note__info' >{option.info}</h2> 
-                            <input type='checkbox' value='completed'/> 
+                            <button className='note__edit' >edit</button>
+                            <input type='checkbox' value='completed' defaultChecked={option.completed ? true : false}/> 
                           </div>
                              ))}
                 </section>
@@ -58,7 +60,8 @@ const [onSearchChange, setOnSearchChange] = useState('');
                 {filteredNotes.map((option) => (
                   <div className='note__duo' key={option.item_id}>
                           <h2 className='note__info' >{option.info}</h2> 
-                          <input type='checkbox' value='completed'/> 
+                          <button className='note__edit' >edit</button>
+                          <input type='checkbox' value='completed' defaultChecked={option.completed ? true : false}/> 
                         </div>
                           ))}
                 </section>
@@ -69,7 +72,8 @@ const [onSearchChange, setOnSearchChange] = useState('');
                 {filteredEvents.map((option) => (
                   <div className='note__duo' key={option.item_id}>
                           <h2 className='note__info' >{option.info}</h2> 
-                          <input type='checkbox' value='completed'/> 
+                          <button className='note__edit' >edit</button>
+                          <input type='checkbox' value='completed' defaultChecked={option.completed ? true : false}/> 
                         </div>
                           ))}
                 </section>
