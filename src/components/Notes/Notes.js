@@ -39,36 +39,36 @@ const [finished, setFinished] = useState('');
                     <h2 className='note__bar'></h2> </div>   
                 <section className='note__title'> 
 
-                  <h1>Grocery List</h1>
+                  <h1 className='note__subtitle'>Grocery List</h1>
                   {filteredGroceryList.map((option) => (
                     <div className='note__duo' key={option.item_id}>
-                            <h2 className='note__info' >{option.info}</h2> 
-                            <button className='note__edit' >edit</button>
                             <input type='checkbox' value='completed' defaultChecked={option.completed ? true : false}/> 
+                            <button className='note__edit' >edit</button>
+                            <h4 className='note__info' >{option.info}</h4> 
                           </div>
                              ))}
                 </section>
 
                 <section className='note__title'> 
 
-                <h1>Notes</h1>
+                <h1 className='note__subtitle'>Notes</h1>
                 {filteredNotes.map((option) => (
                   <div className='note__duo' key={option.item_id}>
-                          <h2 className='note__info' >{option.info}</h2> 
-                          <button className='note__edit' >edit</button>
                           <input type='checkbox' value='completed' defaultChecked={option.completed ? true : false}/> 
+                          <button className='note__edit' >edit</button>
+                          <h4 className='note__info' >{option.info}</h4> 
                         </div>
                           ))}
                 </section>
 
                 <section className='note__title'> 
 
-                <h1>Events</h1>
+                <h1 className='note__subtitle'>Events</h1>
                 {filteredEvents.map((option) => (
                   <div className='note__duo' key={option.item_id}>
-                          <h2 className='note__info' >{option.info}</h2> 
-                          <button className='note__edit' >edit</button>
                           <input type='checkbox' value='completed' defaultChecked={option.completed ? true : false}/> 
+                          <button className='note__edit' >edit</button>
+                          <h4 className='note__info' >{option.info}</h4> 
                         </div>
                           ))}
                 </section>

@@ -11,6 +11,8 @@
 
 &__container{
     width: 100%;
+    background-color: lavenderblush;
+    
     
  }    
 
@@ -23,6 +25,7 @@
     flex-direction: row;
     justify-content: space-between;
     color: navy;
+    padding: 0;
  } 
 
 &__title{
